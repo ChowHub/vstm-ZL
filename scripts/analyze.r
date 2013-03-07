@@ -24,7 +24,7 @@ dimnames(M) = list(c(), c('Subject', 'set4.mu', 'set4.kappa', 'set4.p', 'set6.mu
 row = 1
 for (ii in dir(dirname, full.names=TRUE)){
     print(ii)
-    data = read.csv(ii, sep='\t')
+    data = read.csv(ii)
     names(data) = vnames
     data = calcDiff(data)
     for (numstims in c(4,6)){
